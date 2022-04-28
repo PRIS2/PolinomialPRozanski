@@ -8,7 +8,6 @@ def main():
     first_polynom = input()
     print("Enter your second Polynomial")
     second_polynom = input()
-    
     arg = input("What you want to do? ('+','-' ,'*' ,'/' ): ")
 
     p1 = parse_expr(first_polynom)
