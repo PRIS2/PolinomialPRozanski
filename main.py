@@ -5,24 +5,24 @@ from sympy.parsing.sympy_parser import parse_expr
 def main():
     print("Enter your first Polynomial")
     print("Example: 3*x**2 + 5*x + 2*y")
-    firstPolynom = input()
+    first_polynom = input()
     print("Enter your second Polynomial")
-    secondPolynom = input()
+    second_polynom = input()
     
     arg = input("What you want to do? ('+','-' ,'*' ,'/' ): ")
 
-    p1 = parse_expr(firstPolynom)
-    p2 = parse_expr(secondPolynom)
+    p1 = parse_expr(first_polynom)
+    p2 = parse_expr(second_polynom)
 
     result = None
     if(arg == "+"):
-        result = Add(p1, p2)
+        result = add(p1, p2)
     elif(arg == "-"):
-        result = Sub(p1, p2)
+        result = sub(p1, p2)
     elif(arg == "*"):
-        result = Sub(p1, p2)
+        result = mul(p1, p2)
     elif(arg == "/"):
-        result = Sub(p1, p2)
+        result = dev(p1, p2)
     else:
         print("Incorect input")
 
@@ -33,16 +33,16 @@ def main():
     else:
         print("Some Error\n")
 
-def Add(first, second):
+def add(first, second):
     return first + second
 
-def Sub(first, second):
+def sub(first, second):
     return first - second
 
-def Mul(first, second):
+def mul(first, second):
     return first * second
 
-def Dev(first, second):
+def dev(first, second):
     return pdiv(first, second)
 
 
